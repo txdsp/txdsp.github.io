@@ -51,7 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Real-Time Systems" href="real_time.html" />
+    <link rel="next" title="Hardware" href="hardware.html" />
     <link rel="prev" title="Signal Transforms" href="../algorithms/transforms.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -169,6 +169,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="hardware.html">
+   Hardware
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="real_time.html">
    Real-Time Systems
   </a>
@@ -270,6 +275,16 @@
      Popular languages for DSP
     </a>
    </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#package-management">
+     Package management
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter">
+     Jupyter
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -313,15 +328,7 @@
 <p class="card-text"><strong><a class="reference external" href="#c">C</a></strong></p>
 </div>
 <div class="card-body docutils">
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<p class="card-text"><strong><a class="reference external" href="#julia">Julia</a></strong></p>
-</div>
-<div class="card-body docutils">
+<p class="card-text"><a class="reference external" href="#c">Getting started with embedded C</a></p>
 </div>
 </div>
 </div>
@@ -331,6 +338,17 @@
 <p class="card-text"><strong><a class="reference external" href="#python">Python</a></strong></p>
 </div>
 <div class="card-body docutils">
+<p class="card-text"><a class="reference external" href="#python">Installation and getting started</a></p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text"><strong><a class="reference external" href="#julia">Julia</a></strong></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><a class="reference external" href="#julia">Installation and getting started</a></p>
 </div>
 </div>
 </div>
@@ -340,6 +358,7 @@
 <p class="card-text"><strong><a class="reference external" href="#matlab">MATLAB</a></strong></p>
 </div>
 <div class="card-body docutils">
+<p class="card-text"><a class="reference external" href="#matlab">Installation and getting started</a></p>
 </div>
 </div>
 </div>
@@ -371,24 +390,72 @@ time, usually in the form of developer surveys.</p>
 <li><p><a class="reference external" href="https://www.tiobe.com/tiobe-index/">TIOBE index</a></p></li>
 </ul>
 </div>
+<div class="section" id="package-management">
+<h2>Package management<a class="headerlink" href="#package-management" title="Permalink to this headline">¶</a></h2>
+<p>Many of the most frustrating aspects of programming and software development can be avoided by using a <a class="reference external" href="https://en.wikipedia.org/wiki/Package_manager">package manager</a>, both for your operating system and for your particular language.</p>
+<ul class="simple">
+<li><p>On Windows, the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/package-manager/">package manager</a> can be accessed using the <code class="docutils literal notranslate"><span class="pre">winget</span></code> command in <a class="reference external" href="https://aka.ms/terminal">powershell</a>.</p></li>
+<li><p>Mac OS, <a class="reference external" href="https://brew.sh">Homebrew</a> is the most popular package manager.</p></li>
+<li><p>Python’s package manager <a class="reference external" href="https://pypi.org/project/pip/">pip</a> is a standalone program which can be accessed using either the command <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">pip3</span></code> depending on your installation.</p></li>
+<li><p>Julia’s package manager <a class="reference external" href="https://docs.julialang.org/en/v1/stdlib/Pkg/">Pkg</a> can be accessed by pressing the <code class="docutils literal notranslate"><span class="pre">]</span></code> key in the Julia REPL</p></li>
+</ul>
+</div>
+<div class="section" id="jupyter">
+<h2>Jupyter<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h2>
+<p>Interactive programming can be extremely helpful for simulation and prototyping. <a class="reference external" href="https://jupyter.org">Project Jupyter</a> (portmanteau of Julia, Python, R) allows for several languages to be developed interactively using notebooks.</p>
+<p>The easiest way to get started is by first installing <a class="reference external" href="#Python">Python</a> and then using pip to install <a class="reference external" href="https://jupyterlab.readthedocs.io/">Jupyter Lab</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install jupyterlab</span>
+</pre></div>
+</div>
+<p>Then, you can run it using the <code class="docutils literal notranslate"><span class="pre">jupyter-lab</span></code> command.</p>
+</div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="c">
 <h1>C<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h1>
 <p>The C programming language has consistently ranked among the top languages for
 decades. Currently, C is popular for embedded systems, operating systems, and
 high performance/supercomputer applications.</p>
+<p><strong>Getting started with C for embedded systems</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://danjacobellis.net/EE445S-lab/stm32h735g.html">Setup guide for STM32 discovery board</a></p></li>
+<li><p><a class="reference external" href="https://danjacobellis.net/EE445S-lab/lab1/index.html">Real-time DSP Lab #1</a></p></li>
+</ul>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="python">
 <h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
 <p>Python is currently the most popular general purpose programming language.
-Unlike C, python has a package manager which simplifies development,
-especially for simulations.</p>
+Use in embedded and real-time systems is possible via <a class="reference external" href="https://micropython.org">micropython</a>.</p>
+<p><strong>Installation and getting started</strong></p>
+<p>You can install Python 3 using your operating system’s <a class="reference external" href="#package-management">package manager</a>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">winget install Python.Python.3</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.brew.sh/Homebrew-and-Python">Homebrew and python</a></p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Many operating systems will have Python 2 pre-installed. Depending on your operating system and installation process, the <code class="docutils literal notranslate"><span class="pre">python</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code> commands might point to Python 2 while <code class="docutils literal notranslate"><span class="pre">python3</span></code> and <code class="docutils literal notranslate"><span class="pre">pip3</span></code> commands point the python 3. You may want to create or modify any <a class="reference external" href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a> to the <code class="docutils literal notranslate"><span class="pre">python</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code> commands after installation to avoid confusion or modify path <a class="reference external" href="https://en.wikipedia.org/wiki/Environment_variable">environemt variables</a></p>
+</div>
+<p>A great way to write Python code for simulation and prototyping is with <a class="reference external" href="#Jupyter">Jupyter Lab</a>.</p>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="julia">
 <h1>Julia<a class="headerlink" href="#julia" title="Permalink to this headline">¶</a></h1>
 <p>Julia is one of the fastest growing languages. It is increasingly used in
 education and industry, especially for high-performance computing and
 machine learning applications.</p>
+<p><strong>Installation and getting started</strong></p>
+<p>You can install Julia using your operating system’s <a class="reference external" href="#package-management">package manager</a>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">winget install Julialang.Julia</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">brew install --cask julia</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The official Julia language organization also provides <a class="reference external" href="https://julialang.org/downloads/">installers</a>, platform-specific <a class="reference external" href="https://julialang.org/downloads/platform/">installation instructions</a>, and several <a class="reference external" href="https://julialang.org/learning/">tutorials</a>.</p>
+</div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="matlab">
 <h1>MATLAB<a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h1>
@@ -396,6 +463,10 @@ machine learning applications.</p>
 signal processing, use MATLAB since it offers a set of interoperable,
 application-specific toolboxes for everything from filter design to
 embedded code generation.</p>
+<p><strong>Installation and getting started</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ut.service-now.com/sp?id=ut_bs_service_detail&amp;sys_id=f9d65c7c4ff9d200f6897bcd0210c77d">Licence and installation instructions for UT Austin students</a></p></li>
+</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -430,10 +501,10 @@ embedded code generation.</p>
             <p class="prev-next-title">Signal Transforms</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="real_time.html" title="next page">
+    <a class='right-next' id="next-link" href="hardware.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Real-Time Systems</p>
+        <p class="prev-next-title">Hardware</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
