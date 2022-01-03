@@ -1,0 +1,26 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+
+parts:
+  - caption: Applications
+    chapters:
+    - file: applications/comms
+    - file: applications/audio
+    - file: applications/image
+  - caption: Theory
+    chapters:
+    - file: theory/signals
+    - file: theory/harmonic
+    - file: theory/time_frequency
+  - caption: Algorithms
+    chapters:
+    - file: algorithms/signal_generation
+    - file: algorithms/filters
+    - file: algorithms/transforms
+  - caption: Implementation
+    chapters:
+    - file: implementation/languages
+    - file: implementation/real_time
