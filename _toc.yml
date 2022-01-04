@@ -23,4 +23,5 @@ parts:
   - caption: Implementation
     chapters:
     - file: implementation/languages
+    - file: implementation/hardware
     - file: implementation/real_time
