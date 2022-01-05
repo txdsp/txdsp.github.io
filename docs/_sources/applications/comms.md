@@ -50,3 +50,7 @@ If the transmission medium supports all frequencies from zero hertz up to some m
 If the transmission medium only supports a narrow band of frequencies or is shared by several users or devices, it is common to allocate frequency sub-bands to specific users. This is achieved by modulation, the process of shifting a signal to a specific frequency band.
 
 :::
+
+An example of digital communication that is wireline, synchronous, and baseband is the transmission of uncompressed video from a PC to a monitor via HDMI. These types of systems typically require little or no use of digital signal processing.
+
+In contrast, a communications satellite performs wireless, asynchronous, and frequency modulated communications. Systems with these characteristics often require several subsystems to perform tasks such as modulation, filtering, equalization, coding, and encryption. Though it's possible to perform these with dedicated hardware, it is often advantageous to implement one or more of these subsystems in software In this case we refer to the system as a software defined radio (SDR). DSP theory and algorithms form a foundation on which to design and implement SDRs.

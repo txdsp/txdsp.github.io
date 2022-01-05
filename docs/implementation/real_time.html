@@ -269,6 +269,47 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="real-time-systems">
 <h1>Real-Time Systems<a class="headerlink" href="#real-time-systems" title="Permalink to this headline">¶</a></h1>
+<p>Most embedded computing tasks have a <a class="reference external" href="https://en.wikipedia.org/wiki/Time_limit">deadline</a>, but the consequences of missing this deadline vary depending on the application. This leads to a natural classification of systems based on the severity consequence for missing the deadline.</p>
+<p><strong>Hard</strong> – Missing the deadline is a total system failure. Example: deployment of a car airbag.</p>
+<p><strong>Firm</strong> – Missing the deadline makes the system useless, but there is an opportunity to retry or correct the result. Example: on a printer, missing a deadline of depositing ink may completely ruin the result, but the print can be restarted or corrected by hand.</p>
+<p><strong>Soft</strong> – Missing the deadline makes the system less useful, but it is still better than having no result at all. Example: frame update in a video game.</p>
+<p>Systems with a deadline are said to be <a class="reference external" href="https://en.wikipedia.org/wiki/Real-time_computing">real-time</a>. Systems with a soft deadline can be run on a smartphone, PC, or single-board computer running a general purpose operating system. Systems with hard or firm deadlines are typically executed on <a class="reference external" href="https://en.wikipedia.org/wiki/Bare_machine">bare metal</a>. The presence of an operating system influences the type of processor that can be used, since most operating systems require a <a class="reference external" href="https://en.wikipedia.org/wiki/Memory_management_unit">memory management unit</a>.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Processor Type</p></th>
+<th class="text-align:center head"><p>Example application</p></th>
+<th class="text-align:center head"><p>Memory Management Unit</p></th>
+<th class="text-align:center head"><p>Approximate Power (Watts)</p></th>
+<th class="text-align:center head"><p>Approximate performance (MIPS)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>ARM Cortex-M</p></td>
+<td class="text-align:center"><p>Automotive</p></td>
+<td class="text-align:center"><p>No</p></td>
+<td class="text-align:center"><p>0.1</p></td>
+<td class="text-align:center"><p>100</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>ARM Cortex-A</p></td>
+<td class="text-align:center"><p>Smartphone</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1000</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>TI C6000</p></td>
+<td class="text-align:center"><p>Medical Imaging</p></td>
+<td class="text-align:center"><p>No</p></td>
+<td class="text-align:center"><p>3</p></td>
+<td class="text-align:center"><p>5000</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Intel Core i5</p></td>
+<td class="text-align:center"><p>Desktop PC</p></td>
+<td class="text-align:center"><p>Yes</p></td>
+<td class="text-align:center"><p>50</p></td>
+<td class="text-align:center"><p>100000</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 
     <script type="text/x-thebe-config">
