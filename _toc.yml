@@ -5,6 +5,9 @@ format: jb-book
 root: intro
 
 parts:
+  - caption: Introduction
+    chapters:
+    - file: dsp
   - caption: Applications
     chapters:
     - file: applications/comms

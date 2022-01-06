@@ -14,10 +14,15 @@ $$ \delta(t) = \lim_{\sigma \to 0}{g(t,\sigma)} $$
 
 $$ \text{Ш}(t,T) =  \sum_{k=-\infty}^{\infty} \delta(t - k T) $$
 
+(sampling)=
 ## Sampling
 
 $$x[n] = \left. x(t) \right|_{t=nT_s} = x(t) Ш(t,T_s)$$
 
+(quantization)=
+## Quantization
+
 ## Information theory
 
+(theorem-of-interpolation)=
 ### Cardinal theorem of interpolation
