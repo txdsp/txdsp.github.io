@@ -3,13 +3,13 @@
 :::{panels}
 :container: text-center
 
-**Applications**
+**Introduction**
 ^^^
-[Digital communications](applications/comms.md)<br>
-[Audio](applications/audio.md)<br>
-[Images and Video](applications/image.md)
+[Digital Signal Processing](dsp.md)<br>
 
----
+:::
+
+<!---
 
 **Theory**
 ^^^
@@ -33,13 +33,14 @@
 [Hardware](implementation/hardware.md)<br>
 [Programming languages](implementation/languages.md)
 
+---
 
-:::
+**Applications**
+^^^
+[Digital communications](applications/comms.md)<br>
+[Audio](applications/audio.md)<br>
+[Images and Video](applications/image.md)
 
-## Introduction
+-->
 
-This is a supplemental resource for [EE 445S real-time digital signal processing](http://users.ece.utexas.edu/~bevans/courses/realtime/index.html). There are several goals of this project.
 
-* Provide a broad perspective and context for digital signal processing
-* Provide code examples in multiple languages
-* Ability to download, access, and search offline

@@ -8,23 +8,23 @@ parts:
   - caption: Introduction
     chapters:
     - file: dsp
-  - caption: Applications
-    chapters:
-    - file: applications/comms
-    - file: applications/audio
-    - file: applications/image
   - caption: Theory
     chapters:
     - file: theory/signals
-    - file: theory/harmonic
-    - file: theory/time_frequency
-  - caption: Algorithms
-    chapters:
-    - file: algorithms/signal_generation
-    - file: algorithms/filters
-    - file: algorithms/transforms
-  - caption: Implementation
-    chapters:
-    - file: implementation/languages
-    - file: implementation/hardware
-    - file: implementation/real_time
+  #   - file: theory/harmonic
+  #   - file: theory/time_frequency
+  # - caption: Algorithms
+  #   chapters:
+  #   - file: algorithms/signal_generation
+  #   - file: algorithms/filters
+  #   - file: algorithms/transforms
+  # - caption: Implementation
+  #   chapters:
+  #   - file: implementation/languages
+  #   - file: implementation/hardware
+  #   - file: implementation/real_time
+  # - caption: Applications
+  #   chapters:
+  #   - file: applications/comms
+  #   - file: applications/audio
+  #   - file: applications/image

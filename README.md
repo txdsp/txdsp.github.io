@@ -1,7 +1,5 @@
 # [txdsp.net](txdsp)
 
-This webpage contains supplemental material for [EE 445S real-time digital signal processing laboratory][realtime]
-
 ## Organization
 
 The source materials consist of MyST markdown files (.md) and Jupyter notebooks (.ipynb) which are built into a webpage using [Jupyter Book][book].
@@ -19,7 +17,7 @@ If you would like to be added as a contributor to this repository, contact [Dan 
 
 ## Building and hosting
 
-The [build script](build.sh) compiles the source materials into a webpage located in the docs folder. Once changes are committed to this repository, they are automatically published using GitHub pages to [txdsp.net][txdsp]
+The [build script](build.py) compiles the source materials into a webpage located in the docs folder. Once changes are committed to this repository, they are automatically published using GitHub pages to [txdsp.net][txdsp]
 
 [txdsp]:https://txdsp.net
 [realtime]:http://users.ece.utexas.edu/~bevans/courses/realtime/
