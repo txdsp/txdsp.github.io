@@ -41,9 +41,9 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -53,8 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Harmonic Analysis" href="harmonic.html" />
-    <link rel="prev" title="Images and Video" href="../applications/image.html" />
+    <link rel="prev" title="Digital signal processing" href="../dsp.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -107,28 +106,6 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Applications
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../applications/comms.html">
-   Digital Communications
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../applications/audio.html">
-   Audio
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../applications/image.html">
-   Images and Video
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Theory
  </span>
 </p>
@@ -136,60 +113,6 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Signals, Systems, and Information
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="harmonic.html">
-   Harmonic Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time_frequency.html">
-   Time-Frequency Analysis
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Algorithms
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../algorithms/signal_generation.html">
-   Signal Generation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../algorithms/filters.html">
-   Digital Filters
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../algorithms/transforms.html">
-   Signal Transforms
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Implementation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../implementation/languages.html">
-   Programming Languages
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../implementation/hardware.html">
-   Hardware
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../implementation/real_time.html">
-   Real-Time Systems
   </a>
  </li>
 </ul>
@@ -238,7 +161,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -272,7 +195,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -280,26 +203,9 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#continuous-signals-and-distributions">
-   Continuous signals and distributions
+  <a class="reference internal nav-link" href="#signals-and-distributions">
+   Signals and distributions
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gaussian">
-     Gaussian
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dirac-delta">
-     Dirac delta
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#impulse-train">
-     Impulse train
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sampling">
@@ -312,16 +218,9 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#information-theory">
-   Information theory
+  <a class="reference internal nav-link" href="#cardinal-theorem-of-interpolation">
+   Cardinal theorem of interpolation
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cardinal-theorem-of-interpolation">
-     Cardinal theorem of interpolation
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -331,27 +230,98 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Signals, Systems, and Information</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#signals-and-distributions">
+   Signals and distributions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sampling">
+   Sampling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantization">
+   Quantization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cardinal-theorem-of-interpolation">
+   Cardinal theorem of interpolation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="signals-systems-and-information">
 <h1>Signals, Systems, and Information<a class="headerlink" href="#signals-systems-and-information" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="continuous-signals-and-distributions">
-<h2>Continuous signals and distributions<a class="headerlink" href="#continuous-signals-and-distributions" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="gaussian">
-<h3>Gaussian<a class="headerlink" href="#gaussian" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="signals-and-distributions">
+<h2>Signals and distributions<a class="headerlink" href="#signals-and-distributions" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text"><strong>Gaussian</strong></p>
+</div>
+<div class="card-body docutils">
 <div class="math notranslate nohighlight">
 \[ g(t,\sigma) = \frac{1}{\sigma\sqrt{2\pi}} \exp\left( \frac{-t^2}{2\sigma^2} \right) \]</div>
 </div>
-<div class="section" id="dirac-delta">
-<h3>Dirac delta<a class="headerlink" href="#dirac-delta" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text"><strong>Dirac delta</strong></p>
+</div>
+<div class="card-body docutils">
 <div class="math notranslate nohighlight">
 \[ \delta(t) = \lim_{\sigma \to 0}{g(t,\sigma)} \]</div>
 </div>
-<div class="section" id="impulse-train">
-<h3>Impulse train<a class="headerlink" href="#impulse-train" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text"><strong>Kronecker delta</strong></p>
+</div>
+<div class="card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\delta[n] = \mathbf{1}_{\{n=0\}} = \begin{cases} 1 &amp; \text{if } n=0 \\ 0 &amp; \text{otherwise}\end{cases}\end{split}\]</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text"><strong>Impulse train</strong></p>
+</div>
+<div class="card-body docutils">
 <div class="math notranslate nohighlight">
 \[ \text{Ш}(t,T) =  \sum_{k=-\infty}^{\infty} \delta(t - k T) \]</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="sampling">
@@ -361,12 +331,12 @@
 </div>
 <div class="section" id="quantization">
 <span id="id2"></span><h2>Quantization<a class="headerlink" href="#quantization" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[Q(x) = \Delta \text{ round} \left( \frac{x}{\Delta} \right) \]</div>
 </div>
-<div class="section" id="information-theory">
-<h2>Information theory<a class="headerlink" href="#information-theory" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="cardinal-theorem-of-interpolation">
-<span id="theorem-of-interpolation"></span><h3>Cardinal theorem of interpolation<a class="headerlink" href="#cardinal-theorem-of-interpolation" title="Permalink to this headline">¶</a></h3>
-</div>
+<span id="theorem-of-interpolation"></span><h2>Cardinal theorem of interpolation<a class="headerlink" href="#cardinal-theorem-of-interpolation" title="Permalink to this headline">¶</a></h2>
+<p>If a signal <span class="math notranslate nohighlight">\(x(t)\)</span> contains no frequencies higher than B hertz, it is completely determined by giving its values at a series of points spaced <span class="math notranslate nohighlight">\(\frac{1}{2B}\)</span> seconds apart.</p>
 </div>
 </div>
 
@@ -392,37 +362,28 @@
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../applications/image.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../dsp.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Images and Video</p>
+            <p class="prev-next-title">Digital signal processing</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="harmonic.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Harmonic Analysis</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Dan Jacobellis<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Dan Jacobellis<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 

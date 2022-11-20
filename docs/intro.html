@@ -41,7 +41,7 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -104,28 +104,6 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Applications
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="applications/comms.html">
-   Digital Communications
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="applications/audio.html">
-   Audio
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="applications/image.html">
-   Images and Video
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Theory
  </span>
 </p>
@@ -133,60 +111,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="theory/signals.html">
    Signals, Systems, and Information
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="theory/harmonic.html">
-   Harmonic Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="theory/time_frequency.html">
-   Time-Frequency Analysis
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Algorithms
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="algorithms/signal_generation.html">
-   Signal Generation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="algorithms/filters.html">
-   Digital Filters
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="algorithms/transforms.html">
-   Signal Transforms
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Implementation
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="implementation/languages.html">
-   Programming Languages
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="implementation/hardware.html">
-   Hardware
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="implementation/real_time.html">
-   Real-Time Systems
   </a>
  </li>
 </ul>
@@ -235,7 +159,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -269,27 +193,24 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Overview</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="overview">
@@ -299,68 +220,48 @@
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-header docutils">
-<p class="card-text"><strong>Applications</strong></p>
+<p class="card-text"><strong>Introduction</strong></p>
 </div>
 <div class="card-body docutils">
-<p class="card-text"><a class="reference internal" href="applications/comms.html"><span class="doc std std-doc">Digital communications</span></a><br>
-<a class="reference internal" href="applications/audio.html"><span class="doc std std-doc">Audio</span></a><br>
-<a class="reference internal" href="applications/image.html"><span class="doc std std-doc">Images and Video</span></a></p>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<p class="card-text"><strong>Theory</strong></p>
-</div>
-<div class="card-body docutils">
-<p class="card-text"><a class="reference internal" href="theory/signals.html"><span class="doc std std-doc">Signals, systems, and information</span></a><br>
-<a class="reference internal" href="theory/harmonic.html"><span class="doc std std-doc">Harmonic analysis</span></a><br>
-<a class="reference internal" href="theory/time_frequency.html"><span class="doc std std-doc">Time-frequency analysis</span></a></p>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<p class="card-text"><strong>Algorithms</strong></p>
-</div>
-<div class="card-body docutils">
-<p class="card-text"><a class="reference internal" href="algorithms/signal_generation.html"><span class="doc std std-doc">Signal generation</span></a><br>
-<a class="reference internal" href="algorithms/filters.html"><span class="doc std std-doc">Digital filters</span></a><br>
-<a class="reference internal" href="algorithms/transforms.html"><span class="doc std std-doc">Signal transforms</span></a></p>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<p class="card-text"><strong>Implementation</strong></p>
-</div>
-<div class="card-body docutils">
-<p class="card-text"><a class="reference internal" href="implementation/real_time.html"><span class="doc std std-doc">Real-time systems</span></a><br>
-<a class="reference internal" href="implementation/hardware.html"><span class="doc std std-doc">Hardware</span></a><br>
-<a class="reference internal" href="implementation/languages.html"><span class="doc std std-doc">Programming languages</span></a></p>
+<p class="card-text"><a class="reference internal" href="dsp.html"><span class="doc std std-doc">Digital Signal Processing</span></a><br></p>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>This is a supplemental resource for <a class="reference external" href="http://users.ece.utexas.edu/~bevans/courses/realtime/index.html">EE 445S real-time digital signal processing</a>. There are several goals of this project.</p>
-<ul class="simple">
-<li><p>Provide a broad perspective and context for digital signal processing</p></li>
-<li><p>Provide code examples in multiple languages</p></li>
-<li><p>Ability to download, access, and search offline</p></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
+<!---
+
+**Theory**
+^^^
+[Signals, systems, and information](theory/signals.md)<br>
+[Harmonic analysis](theory/harmonic.md)<br>
+[Time-frequency analysis](theory/time_frequency.md)
+
+---
+
+**Algorithms**
+^^^
+[Signal generation](algorithms/signal_generation.md)<br>
+[Digital filters](algorithms/filters.md)<br>
+[Signal transforms](algorithms/transforms.md)
+
+---
+
+**Implementation**
+^^^
+[Real-time systems](implementation/real_time.md)<br>
+[Hardware](implementation/hardware.md)<br>
+[Programming languages](implementation/languages.md)
+
+---
+
+**Applications**
+^^^
+[Digital communications](applications/comms.md)<br>
+[Audio](applications/audio.md)<br>
+[Images and Video](applications/image.md)
+
+-->
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -389,8 +290,8 @@
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
     <a class='right-next' id="next-link" href="dsp.html" title="next page">
     <div class="prev-next-info">
@@ -400,19 +301,17 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Dan Jacobellis<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Dan Jacobellis<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
